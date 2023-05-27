@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="50dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vikas Yadav"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/text_view_name"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Delhi, within 2.4 KM"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/text_view_distance"/>
+
+                <ProgressBar
+                    android:layout_width="100dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/text_view_name"
+                    app:layout_constraintRight_toRightOf="@id/text_view_name"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_distance"
+                    android:id="@+id/progress_bar"
+                    android:max="100"
+                    android:progress="40"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/progress_bar"
+                    android:src="@drawable/baseline_call_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/img_call"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/progress_bar"
+                    android:src="@drawable/baseline_person_add_alt_1_24"
+                    app:layout_constraintLeft_toRightOf="@id/img_call"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/img_cadd"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JRF | 3 years of experience\nHi Community! I am available at your service!"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/img_call"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Invite"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_verified_user_24"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

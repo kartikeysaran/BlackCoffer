@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".RefineActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your Availability"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/text_view_availability"
+        />
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_availability"
+        android:id="@+id/spinner"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your Status"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        android:id="@+id/text_view_add_status"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_add_status"
+        android:id="@+id/edit_text_status"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Hyperlocal distance"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_status"
+        android:id="@+id/text_view_distance"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_distance"
+        android:layout_marginTop="10dp"
+        android:valueFrom="1"
+        android:stepSize="1"
+        android:valueTo="100"
+        android:id="@+id/slider"
+        android:value="72"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Purpose"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider"
+        android:id="@+id/text_view_purpose"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coffee"
+        android:id="@+id/btn_coffee"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_purpose"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Business"
+        app:layout_constraintLeft_toRightOf="@id/btn_coffee"
+        app:layout_constraintTop_toTopOf="@id/btn_coffee"
+        app:layout_constraintBottom_toBottomOf="@id/btn_coffee"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#808080"
+        android:id="@+id/btn_business"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save and Explore"
+        app:layout_constraintTop_toBottomOf="@id/btn_business"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
